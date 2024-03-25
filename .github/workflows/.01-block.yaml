@@ -1,0 +1,18 @@
+name: 01-block
+on: push
+
+jobs:
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: say hello
+              run: echo "Hello from davinci"
+    echo-good-by:
+        runs-on: ubuntu-latest
+        steps:
+            - name: failed step
+              run: |
+                echo "i will fail"
+                exit 1
+            - name: say good by
+              run: echo "Good Bye"
