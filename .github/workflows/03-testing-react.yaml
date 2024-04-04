@@ -2,7 +2,7 @@ name: testing react project
 on:
     push:
         branches:
-            - manin
+            - main
 jobs:
     testing-react:
         runs-on: ubuntu-latest
