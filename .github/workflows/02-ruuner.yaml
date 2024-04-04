@@ -1,0 +1,12 @@
+name: testing runners
+on:
+    push:
+        branches:
+            - main
+jobs:
+    testing-runner:
+        runs-on: ubuntu-latest
+        steps:
+            - name: first step
+              run: |
+                ip addr
