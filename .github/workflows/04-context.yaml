@@ -1,9 +1,12 @@
 name: Testing context
 on: push
+env:
+    LEVEL: "i am a devops engineer"
 jobs:
     testing-variables:
         runs-on: ubuntu-latest
         steps:
             - name: Checking for variable
               run: |
-                echo "Tell them who am i ${{ vars.WHOAMI}}"
+                echo "Tell them who am i ${{ vars.WHOAMI}} \n"
+                echo "and ${{env.LEVEL}}"
