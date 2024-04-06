@@ -1,8 +1,5 @@
 name: testing runners
-on:
-    push:
-        branches:
-            - main
+on: workflow_dispatch
 jobs:
     testing-runner:
         runs-on: ubuntu-latest

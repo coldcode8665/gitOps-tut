@@ -1,0 +1,9 @@
+name: Testing context
+on: push
+jobs:
+    testing-variables:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checking for variable
+              run: |
+                echo "Tell them who am i ${{ vars.WHOAMI}}"
