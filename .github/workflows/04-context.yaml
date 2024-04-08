@@ -11,12 +11,7 @@ jobs:
               with:
                 ssh-private-key: ${{ secrets.SSH_P_KEY }}
 
-            - name: Checking for variable
+            - name: SSh into EC2 instance
               run: |
-                echo "Tell them who am i ${{ vars.WHOAMI}} \n"
-                echo "and ${{env.LEVEL}}"
-                echo "list the content of ssh folder"
-                sleep 2
-                ls ~/.ssh
-
+                ls -al ~/.ssh
 
