@@ -16,6 +16,6 @@ jobs:
 
             - name: SSh into EC2 instance
               run: |
-                ssh -o StrictHostKeyChecking=no -i ./moso_dev.pem ubuntu@ec2-52-206-236-229.compute-1.amazonaws.com "touch worked.txt"
+                ssh -o StrictHostKeyChecking=no -i ./moso_dev.pem ubuntu@ec2-52-206-236-229.compute-1.amazonaws.com "cd ~ && git pull origin main"
 
 
