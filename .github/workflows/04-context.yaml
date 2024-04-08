@@ -17,6 +17,6 @@ jobs:
                 echo "and ${{env.LEVEL}}"
                 echo "list the content of ssh folder"
                 sleep 2
-                ll ~/.ssh
+                ls ~/.ssh
 
 
