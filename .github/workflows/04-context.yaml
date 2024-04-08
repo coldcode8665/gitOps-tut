@@ -9,7 +9,7 @@ jobs:
             - name: connecting ssh for testing
               uses: webfactory/ssh-agent@v0.9.0
               with:
-                ssh-private-key: ${{ secrets.SSH_P_KEY }}
+                ssh-private-key: ${{ vars.SSH_KEY }}
 
             - name: SSh into EC2 instance
               run: |
