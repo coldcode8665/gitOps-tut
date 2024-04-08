@@ -16,6 +16,8 @@ jobs:
 
             - name: SSh into EC2 instance
               run: |
+                echo "sshing"
+                sleep 4
                 ssh -o StrictHostKeyChecking=no -i ./moso_dev.pem ubuntu@ec2-52-206-236-229.compute-1.amazonaws.com "cd ~ && bash deploy.sh"
 
 
