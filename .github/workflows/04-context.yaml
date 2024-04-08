@@ -13,5 +13,6 @@ jobs:
 
             - name: SSh into EC2 instance
               run: |
-                ls -al ~/.ssh
+                ssh -i ${{ secrets.SSH_P_KEY }} ubuntu@ec2-52-206-236-229.compute-1.amazonaws.com "touch worked.txt"
+
 
