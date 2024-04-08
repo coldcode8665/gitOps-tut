@@ -6,7 +6,17 @@ jobs:
     testing-variables:
         runs-on: ubuntu-latest
         steps:
+            - name: connecting ssh for testing
+              uses: webfactory/ssh-agent@v0.9.0
+              with:
+                ssh-private-key: ${{ secrets.SSH_P_KEY }}
+
             - name: Checking for variable
               run: |
                 echo "Tell them who am i ${{ vars.WHOAMI}} \n"
                 echo "and ${{env.LEVEL}}"
+                echo "list the content of ssh folder"
+                sleep 2
+                ll ~/.ssh
+
+
