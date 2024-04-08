@@ -6,6 +6,9 @@ jobs:
     testing-variables:
         runs-on: ubuntu-latest
         steps:
+            - name: make files available
+              uses: actions/checkout@v4
+              
             - name: connecting ssh for testing
               uses: webfactory/ssh-agent@v0.9.0
               with:
@@ -13,6 +16,6 @@ jobs:
 
             - name: SSh into EC2 instance
               run: |
-                ssh -i ${{ vars.SSH_KEY }} ubuntu@ec2-52-206-236-229.compute-1.amazonaws.com "touch worked.txt"
+                ssh -i ./moso_dev.pem ubuntu@ec2-52-206-236-229.compute-1.amazonaws.com "touch worked.txt"
 
 
